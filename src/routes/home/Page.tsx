@@ -1,7 +1,10 @@
 function HomePage() {
 
     return (
-        <div>Home page</div>
+        <div>
+            <h1>Burası anasayfa</h1>
+        </div>
+
     )
 }
 

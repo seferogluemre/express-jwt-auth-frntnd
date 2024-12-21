@@ -8,6 +8,7 @@ function NavbarComp() {
             <ul>
                 <li><NavLink to={"/"}>Ana sayfa</NavLink></li>
                 <li><NavLink to={"/about"}>Hakkımızda</NavLink></li>
+                <li><NavLink to={"/login"}>Giriş</NavLink></li>
             </ul>
         </nav>
     </>
