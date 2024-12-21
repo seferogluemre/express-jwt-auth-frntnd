@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { HomePage, RootLayout, AboutPage, LoginPage } from './routes/index'
+import { HomePage, RootLayout, AboutPage, LoginPage, RegisterPage } from './routes/index'
 
 const routes = createBrowserRouter([
   {
@@ -18,6 +18,10 @@ const routes = createBrowserRouter([
       {
         path: "/login",
         element: <LoginPage />
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />
       },
     ]
   },
