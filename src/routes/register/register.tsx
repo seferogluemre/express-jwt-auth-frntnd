@@ -1,5 +1,12 @@
 import { FormEvent } from "react";
 
+interface RegisterPayload {
+    userName: string,
+    password: string;
+    firstName: string;
+    lastName: string,
+}
+
 function Login() {
 
     const handleRegister = (e: FormEvent) => {
@@ -7,6 +14,8 @@ function Login() {
         const formEl = e.target as HTMLFormElement;
 
         const formData = new FormData(formEl);
+        const data = Object.fromEntries(formData) as unknown as RegisterPayload;
+
 
 
 
