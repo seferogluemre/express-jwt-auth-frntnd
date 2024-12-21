@@ -9,15 +9,24 @@ interface RegisterPayload {
 
 function Login() {
 
-    const handleRegister = (e: FormEvent) => {
+    async function handleRegister(e: FormEvent) {
         e.preventDefault();
         const formEl = e.target as HTMLFormElement;
 
         const formData = new FormData(formEl);
         const data = Object.fromEntries(formData) as unknown as RegisterPayload;
 
+        const response = await fetch("http://localhost:3000/api/auth/register", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
 
+        const responseJson = await response.json();
 
+        console.log(responseJson);
 
     }
 
